@@ -1,0 +1,37 @@
+//-------------------Binary Translation-----------------------------//
+//-----------------------Sumbitters---------------------------------//
+					Muhammad Asaly 308523166
+					Lina Maudlej 205362965
+//--------------------------HW3-------------------------------------//
+//-----------------------3.06.2018---------------------------------//
+
+compilation command and how to run the tool in bzip2 test. please follow these steps:
+
+1.  go to SimpleExamples dir , command:
+	cd <pin_dir>/source/tools/SimpleExamples
+	
+2.  copy your souce file ex4.cpp, commnad:
+	cp ex4.cpp . 
+	
+3.  run make command:
+	make ex4.test
+	
+4. create your dirctory,command:
+	mkdir ex4_BT 
+	
+5. *copy files to this dir and go there to run the tool, command:
+	cp obj-intel64/ex4.* ex4_BT; cd ex4_BT
+	
+6. **run the commnad tool
+<pin_dir> -t ex4.so -prof -- ./bzip2 -k -f input.txt
+<pin_dir> -t ex4.so -inst -- ./bzip2 -k -f input.txt
+
+7. for time command:
+time <pin_dir> -t ex4.so -prof -- ./bzip2 -k -f input.txt
+time <pin_dir> -t ex4.so -inst -- ./bzip2 -k -f input.txt
+
+//-----------------------------------------------------------------//
+//-----------------------------------------------------------------//
+* you need to add the test files to the ex4_BT dirctory; pzip2 and input.txt or tst.
+** For tst test you need to change the b2zip to tst and run the tool command : 
+<pin_dir> -t ex4.so  -- ./tst

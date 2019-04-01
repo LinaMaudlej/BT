@@ -1,0 +1,35 @@
+//-------------------Binary Translation-----------------------------//
+//-----------------------Sumbitters---------------------------------//
+					Muhammad Asaly 308523166
+					Lina Maudlej 205362965
+//--------------------------HW1-------------------------------------//
+//-----------------------19.04.2018---------------------------------//
+
+compilation command and how to run the tool in bzip2 test. please follow these steps:
+
+1.  go to SimpleExamples dir , command:
+	cd <pin_dir>/source/tools/SimpleExamples
+	
+2.  copy your souce file ex1.cpp, commnad:
+	cp ex1.cpp . 
+	
+3.  run make command:
+	make ex1.test
+	
+4. create your dirctory,command:
+	mkdir ex1_BT 
+	
+5. *copy files to this dir and go there to run the tool, command:
+	cp obj-intel64/ex1.* ex1_BT; cd ex1_BT
+	
+6. **run the commnad tool
+<pin_dir> -t ex1.so  -- ./bzip2 -k -f input.txt
+
+7. for time command:
+time <pin_dir> -t ex1.so  -- ./bzip2 -k -f input.txt
+
+//-----------------------------------------------------------------//
+//-----------------------------------------------------------------//
+* you need to add the test files to the ex1_BT dirctory; pzip2 and input.txt or tst.
+** For tst test you need to change the b2zip to tst and run the tool command : 
+<pin_dir> -t ex1.so  -- ./tst
